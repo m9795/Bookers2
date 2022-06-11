@@ -5,12 +5,11 @@
       <h2>Log in</h2>
       <form action="/users/sign_in" accept-charset="UTF-8" method="post">
         <%= form_with model: @user, url: user_session_path do |f| %>
-        
           <div class="field">
             <%= f.label :name %><br />
             <%= f.text_field :name, autofocus: true, class:"name" %>
           </div>
-        
+          
           <div class="field">
             <%= f.label :password %><br />
             <%= f.password_field :password, autocomplete: "off", class:"password" %>
@@ -22,7 +21,7 @@
               <%= f.label :remember_me %>
             </div>
           <% end %>
-        
+          
           <div class="actions">
             <%= f.submit "Log in", class:"btn btn-sm btn-primary" %>
           </div>
