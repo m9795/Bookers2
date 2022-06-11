@@ -38,9 +38,10 @@
               </a>
               <% else %>
               <!-- ログインしていない場合 -->
-              <a class="nav-link text-light" href="/">
-                Home
-              </a>
+              <li>
+                <%= link_to "Home", root_path, class: "nav-link text-light" %>
+              </li>
+
               <a class="nav-link text-light" href="/home/about">
                 About
               </a>
