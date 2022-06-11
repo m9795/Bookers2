@@ -55,7 +55,7 @@
         <tbody>
           <% @books.each do |book| %>
             <tr>
-              <td><%= image_tag @user.get_profile_image(80,80) %></td>
+              <td><%= image_tag book.user.get_profile_image(80,80) %></td>
               <td><%= book.title %></td>
               <td><%= book.body %></td>
             </tr>
