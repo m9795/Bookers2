@@ -22,6 +22,7 @@
 <p>Opinion</p>
 <% @books.each do |book| %>
 <div>
+  <%= image_tag @user.get_profile_image(100,100) %>
   <%= book.title %>
   <%= book.body %>
 </div>
