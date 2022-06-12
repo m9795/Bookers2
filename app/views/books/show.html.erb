@@ -1,6 +1,6 @@
-<%= render 'left', book:@book, books:@books, user:@user %>
+<%= render 'left', book:@book, user:@user %>
 <div>
   <%= image_tag @user.get_profile_image(80,80) %>
-  <%= @book.title %>
-  <%= @book.body %>
+  <%= @show_book.title %>
+  <%= @show_book.body %>
 </div>
