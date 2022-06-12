@@ -17,6 +17,14 @@
           <% end %>
         </td>
         <td><%= @show_book.body %></td>
+        <% if @user == current_user %>
+          <td>
+            edit
+          </td>
+          <td>
+            destroy
+          </td>
+        <% end %>
       </tr>
     </tbody>
   </table>
