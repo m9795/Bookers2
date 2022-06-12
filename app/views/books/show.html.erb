@@ -19,10 +19,10 @@
         <td><%= @show_book.body %></td>
         <% if @user == current_user %>
           <td>
-            edit
+            <%= link_to "Edit", edit_book_path(@show_book.id), class: "btn btn-sm btn-success" %>
           </td>
           <td>
-            destroy
+            <%#= link_to "Destroy", %>
           </td>
         <% end %>
       </tr>
