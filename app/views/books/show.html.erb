@@ -1,6 +1,23 @@
 <%= render 'left', book:@book, user:@user %>
-<div>
-  <%= image_tag @user.get_profile_image(80,80) %>
-  <%= @show_book.title %>
-  <%= @show_book.body %>
+
+<div class="col-md-8 offset-md-1">
+  <h2>Book detail</h2>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>
+          <%= link_to user_path(@show_book.user.id) do  %>
+            <%= image_tag @user.get_profile_image(100,100) %><br />
+            <%= @user.name %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to book_path(@show_book.id) do %>
+            <%= @show_book.title %>
+          <% end %>
+        </td>
+        <td><%= @show_book.body %></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
