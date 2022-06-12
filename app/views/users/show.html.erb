@@ -1,3 +1,5 @@
+<%= render 'books/left', book:@book, books:@books, user:@user %>
+
 <div>
   <% @books.each do |book| %>
     <%= image_tag @user.get_profile_image(80,80) %>
